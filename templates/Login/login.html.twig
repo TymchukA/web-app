@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    {% block stylesheets %}  <link rel="stylesheet" href="{{ asset('build/css/Login.css') }}"> {% endblock %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+</head>
+<body style="background-color: #ef4cdc">
+{% if errors %}
+    {{ errors.messageKey }}
+{% endif %}
+<h2 align="center">Login Form</h2>
+<form class="form-signin" action="{{ path("login") }}" method="post">
+    <div class="imgcontainer">
+        <img src="{{ asset ('user.png') }}" alt="Avatar" class="avatar">
+    </div>
+    <div class="container" align="center" >
+        <label for="username"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="_username" required>
+    <br>
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="_password" required>
+<br>
+        <button type="submit">Login</button>
+       <button type="button" class="cancelbtn">Cancel</button>
+    </div>
+
+
+
+        <!--<span class="psw">Forgot <a href="#">password?</a></span>-->
+
+</form>
+</body>
+</html>
+
+
+

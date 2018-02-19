@@ -1,0 +1,29 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+<table align="center">
+   <tr>
+      <td><ul class="list-group">
+              {% for user in users %}
+                  <li class="list-group-item">
+                      <a href="">
+                          {{ user.username }}
+
+                      </a></li>
+              {% endfor %}
+          </ul></td>
+       <td><ul class="list-group">
+               {% for user in users %}
+                   <li class="list-group-item">
+                       <a href="">
+                           {{ user.email }}
+
+                       </a></li>
+               {% endfor %}
+           </ul></td>
+
+   </tr>
+</table>
+
+
+{% endblock %}

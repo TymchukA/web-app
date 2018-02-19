@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    {% block stylesheets %}  <link rel="stylesheet" href="{{ asset('build/css/main.css') }}"> {% endblock %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+<div class="panel panel-success">
+    <h3>Register</h3>
+</div>
+<div class="panel-body">
+    {{ form(form) }}
+
+
+{% block javascripts %}{% endblock %}
+</body>
+</html>
+
